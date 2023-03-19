@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Your HomeOwner</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h2 class="logo">Get<span>Recruited</span></h2>
+		<nav class="navigation">
+			<a href="homepage.html">Home</a>
+			<a href="about.html">About</a>
+			<!-- <a href="#">Service</a> -->
+			<a href="contact.html">Contact</a>
+			<button class="Loginbtn" id="Loginbtn" >Login</button>
+			<!-- <button class="Loginbtn" id="Loginbtn" onclick=fun3()>Login</button> -->
+			
+		</nav>
+
+	</header>
+
+	<div class="logged"  id="logged"> 
+        <span class="closeicon">
+			<ion-icon name="close-outline"></ion-icon>
+		</span>
+
+		<!-- <span class="addicon">
+			<ion-icon name="add-circle-outline"></ion-icon>
+		</span> -->
+
+		<div class="formlogin" id="formlogin">
+			<h2>Login</h2>
+			<form action="yanus.html">
+				<div class="inputbox">
+					<span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+					<input type="email" required>
+					<label>Email</label>
+				</div>
+				<div class="inputbox">
+					<span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+					<input type="password" required>
+					<label>Password</label>
+				</div>
+				<div class="rememberme">
+					<label ><input type="checkbox">Remember me</label>
+					<a href="#">Forgot Password?</a>
+				</div>
+				<button type="submit" class="btn">Login</button>
+				<div class="register">
+					<p>Don't have an account?<a href="#" class="registerlink" onclick="myfunc2()">Sign Up</a></p>
+
+				</div>
+			</form>
+		</div>
+		<div class="formregister" id="formregister">
+			<h2>Sign Up</h2>
+			<form action="#">
+				<div class="inputbox">
+					<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+					<input type="text" required>
+					<label>Username</label>
+				</div>
+				<div class="inputbox">
+					<span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+					<input type="email" required>
+					<label>Email</label>
+				</div>
+				<div class="inputbox">
+					<span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+					<input type="password" required>
+					<label>Password</label>
+				</div>
+				<div class="rememberme">
+					<label ><input type="checkbox">Agree to the terms & conditions </label>
+					
+				</div>
+				<a href="yanus.html"><button type="submit" class="btn">Register</button></a>
+				<div class="register">
+					<p>Already have an account?<a href="#" class="loginlink" onclick="myfunc()">Login</a></p>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	 
+
+	<script src="script.js">
+		// alert("hell0");
+	</script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+// img{
+//     width: 100%;
+// }
+
+
+body{
+    margin:1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: url('../proj 2/pics/unsplash1.jpeg');
+    background: url(unsplash1.jpeg);
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    // overflow: hidden;
+    animation: introLoad 3s forwards;
+
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+
+}
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    width: 50%;
+    height: 100vh;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);//to hide dash menu
+    transition: transform .5 ease-in-out;
+
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
+
+    }
+    a{
+        color: black;
+        padding: .75em 2em;
+        display: block;
+       
+
+        &:hover{
+            background: rgb(205, 201, 201);
+        }
+
+    }
+
+    .close{
+        float: right;
+        margin: 2em;
+        width: 2.5em;
+    }
+    .Loginbtn {
+        width: 100px;
+        height: 50px;
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        color: black;
+        font-weight: 500;
+        margin-left: 40px;
+        cursor: pointer;
+        transition: .55s;
+    
+    }
+    .Loginbtn:hover{
+        background: rgb(207, 206, 206);
+
+    }
+}
+
+ header{
+
+    display: flex;
+    justify-content: space-between;
+   
+    svg{
+        width: 3em;
+        margin-top: -.6em;
+        cursor: pointer;
+        
+    }
+
+}
+
+h1{
+    font-size: 3rem;
+    margin: 2em;
+    line-height: 3.3rem;
+}
+
+.subhead{
+    font-size: 1.4rem;
+}
+
+
+section.hero{
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+
+    .down-arrow{
+        stroke: white;
+        position: absolute;
+        bottom: 2em;
+        width: 1em;
+        animation: moveArrow 1s alternate-reverse infinite;
+        
+        path{
+            fill: white;
+        }
+    }
+
+}
+
+.more-info{
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height:11em;
+
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 1.25em;
+
+    }
+    .desc{
+        line-height: 1.5rem;
+    }
+
+}
+.open-nav{
+    transform: translateX(0%);
+}
+
+//screen adjustment for various gadgets since we started with mobile
+
+@media only screen and (min-width:680px){
+
+    body{
+        margin:1.5em 5em;
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
+@media only screen and (min-width:920px){
+    .menu{
+        display: none;
+    }
+     nav{
+        transform: translateX(0);
+        position: unset;
+        display:block;
+        width: auto;
+        height: auto;
+        background: none;
+
+        svg.close{
+            display: none;
+
+        }
+
+        ul{
+            display: flex;
+            margin: 0;
+
+        }
+
+        a{
+            font-size: 1em;
+            color: white;
+            padding: .5em 1.5em;
+
+
+
+
+
+            &:hover{
+                background: none;
+                text-decoration: underline;
+               
+            }
+            
+        //     &:hover::after{
+        //         transform: scaleX(1);
+        //     }
+
+        //     &::after{
+                
+        //             content: '';
+        //             position: absolute;
+        //             left: 0;
+        //             bottom: -6px;
+        //             width: 100%;
+        //             height: 3px;
+        //             background: white;
+        //             border-radius: 5px;
+        //             transform: scaleX(0);
+        //             transition: transform .5s; 
+
+        //     }
+        } 
+
+
+        // a::after{
+        //     content: '';
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: -6px;
+        //     width: 100%;
+        //     height: 3px;
+        //     background: white;
+        //     border-radius: 5px;
+        //     transform: scaleX(0);
+        //     transition: transform .5s; 
+        // }
+
+        // a:hover::after{
+        //     transform: scaleX(1);
+        // }
+       
+     }
+
+
+    //  idea number2
+
+     .hero-img{
+        left: unset;
+        right: 0;
+        width: 50%;
+        height:42em;
+
+     }
+     .logo{
+        color: black;
+
+        span{
+            color: green;
+        }
+     }
+
+     section.hero{
+        color: black;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+ 
+        svg.down-arrow{
+            stroke: black;
+            position: unset;
+
+            path{
+
+                fill: black;
+            }
+
+        }
+
+    }
+    .feature{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        gap:3em;
+        margin-bottom: 8em;
+        
+        img{
+            width: 25em;
+        }
+
+        .content{
+            text-align: right;
+            width: 25em;
+        }
+    }
+
+    .feature.left{
+
+        grid-template-areas: 
+           "left right";
+
+           img{
+            grid-area: left;
+           }
+           .content{
+            text-align: left;
+            width: 25em;
+            justify-self: left;
+           }
+
+
+    }
+
+
+}
+
+@media only screen and (min-width:1200px){
+    .wrapper{
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    .feature{
+        gap:0;
+    }
+}
+
+
+
+@keyframes introLoad{
+
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       
+    }
+
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes moveArrow{
+
+    from{
+        transform: translateY(-30px);
+       
+    }
+
+    to{
+       transform: translateY(0);
+    }
+}
+@keyframes moveDown{
+
+    from{
+        transform: translateY(-100px);
+       
+    }
+
+    to{
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+
+
+

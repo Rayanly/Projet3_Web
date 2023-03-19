@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>formulaire Inscription</title>
+	
+	<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<script src="func.js"></script>
+</head>
+<body class="container">
+	<form id="form" action="bvn2.php" method="post" enctype="multipart/form-data">
+<h1 align="center">Inscription</h1>
+		<fieldset>
+			<legend>INFORMATIONS GENERALES </legend>
+ 
+			<table>
+				<tr>
+					<td><label for=""> Vous êtes?</label></td>
+					<td>
+						<input type="radio" id="1" name="candi" value="Candidat" onchange="disable()">Candidat
+						<input type="radio" id="2" name="candi" value="Recruteur" onchange="disable()">Recruteur
+					</td>
+				</tr>
+				<tr>
+					<td><label>Nom</label></td>
+					<td><input type="text" name="nom" placeholder="Prénom" required/> </td>
+                    <td><input type="text" name="prenom" placeholder="Nom de famille"required/></td>
+				</tr>
+
+				
+                <tr>
+                    <td><label>Adresse</label></td>
+                    <td><input type="text" name="adress" placeholder="Adresse de la rue" ></td>
+                    <td><input type="text" name="adress" placeholder="Ville"></td>
+                    
+                </tr>
+                <tr>
+					<td><label for="pays">Pays</label></td>
+					<td>
+						<select name="pays" id="pays">
+						<option value="Maroc">Maroc</option>
+						<option value="Espagne">Espagne</option>
+						<option value="France">France</option>
+					</select>
+				</td>
+                <tr>
+					<td><label>Téléphone</label></td>
+					<td><input type="text" name="Tel" placeholder="Téléphone" /></td>
+				</tr>
+                <tr>
+					<td><label>Adresse courriel</label></td>
+					<td><input type="text" name="email" placeholder="exemple@exemple.com" required/></td>
+				</tr>
+				<tr>
+					<td><label>CNI</label></td>
+					<td><input type="text" name="cni" placeholder="saisir votre CNI" required/></td>
+				</tr>
+				<tr>
+					  <td><label for="date">Date naissance</label></td>
+
+						<td><input type="date" id="date" name="date"
+						 max="2022-12-31"></td>	
+				</tr>
+
+				<tr>
+					<td> <label for=""> Genre</label></td>
+					<td>
+						Masculin <input type="radio" name="genre" value="Masculin">
+						Féminin <input type="radio" name="genre" value="Feminin">
+					</td>
+				</tr>
+
+			</table>
+		</fieldset>
+        <fieldset>
+            <legend>Je suis un Recruteur</legend>
+            <table>
+                <tr>
+					<td><label>Poste</label></td>
+					<td><input type="text" name="Poste" id="Poste" placeholder="Poste actuel" /></td>
+				</tr>
+                <tr>
+					<td><label>Entreprise</label></td>
+					<td><input type="text" name="Entreprise" id="Entreprise" placeholder="Entreprise" /></td>
+				</tr>
+           </table>
+            
+        </fieldset>
+        <fieldset>
+            <legend>Je suis Candidat</legend>
+            <table>
+                <tr>
+                    <td><label for="domaine">Domaine</label></td>
+                    <td><select name="domaine" id="domaine">
+                        <option value="">Choisir un Domaine</option>
+                        <option value="Informatique - Web - Réseaux">Informatique - Web - Réseaux</option>
+                        <option value="Banque - Finance - Assurance">Banque - Finance - Assurance</option>
+                        <option value="">Biologie - Chimie</option>
+                        <option value="">Architecture - Décoration</option>
+                        <option value="">Artisanat d'art – Design - Mode</option>
+                        <option value="">Droit - Justice</option>
+                        <option value="">Biologie - Chimie</option>
+                        <option value="">Autre</option>
+                    </select>
+                    </td>
+
+                </tr>
+                <tr>
+					<td><label name="diplome">Diplome</label></td>
+					<td><select name="diplome" id="diplome">
+                        <option>Choisir un Diplome</option>
+                        <option value="bac">bac</option>
+						<option>bac+2(DEUG, BTS, DUT, DEUST)</option>
+						<option>bac+3(Licence, licence pro)</option>
+						<option>bac+5(Master,diplôme d'ingénieur)</option>
+						<option>bac+8(Doctorat)</option>
+					</select> </td>
+				</tr>
+
+                <tr>
+					<td><label for="cv">Curriculum Vitae</label></td>
+					<td><input type="file" name="cv" id="cv" accept=".pdf" onchange="checkFileSize()">
+					<p>Taille maximale:<strong>10mb</strong></p></td>
+				</tr>
+
+
+                </table>
+        </fieldset>
+
+
+            <center>
+					<button name="envoyer" type="submit">Envoyer</button>
+				    <button type="reset">Annuler</button>
+            </center>
+
+	</form>
+	<!--<script>
+		document.getElementById("form").addEventListener("submit", function(event) {
+		  // Prevent the form from submitting normally
+		  event.preventDefault();
+	  
+		  // Get the value of the selected radio button
+		  var selectedValue = document.querySelector('input[name="candi"]:checked').value;
+	  
+		  // Redirect to the appropriate PHP page based on the selected value
+		  if (selectedValue === "1") {
+			window.location.href = "CandInsert.php";
+		  } else {
+			window.location.href = "RecInsert.php";
+		  }
+		});
+	  </script> -->
+</body>
+
+</html>

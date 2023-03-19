@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+<style>
+
+body {
+  margin: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(plants2.jpeg);
+background-size: cover;
+
+ 
+}
+
+/* .hero-img2{ */
+    /* position: absolute;
+	left: 0;
+	background: url(unsplash1.jpeg);
+	background-size: cover;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: 100%;
+	z-index: -1;
+	animation: introload 3s forwards;
+
+} */
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.logo {
+   
+  color: rgb(31, 29, 29);
+  font-weight: bold;
+}
+.logo span {
+    color: green;
+  }
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  width: 50%;
+  height: 100vh;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5 ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+nav a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+nav a:hover {
+  background: rgb(205, 201, 201);
+}
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+nav .Loginbtn {
+  width: 100px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid rgb(194, 193, 193);
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  color: black;
+  font-weight: 500;
+  margin-left: 40px;
+  cursor: pointer;
+  transition: 0.55s;
+}
+nav .Loginbtn:hover {
+  background: rgb(207, 206, 206);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.3rem;
+ 
+}
+header svg {
+  width: 3em;
+  margin-top: -0.6em;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2em;
+  line-height: 3.3rem;
+}
+
+.tab 
+	{
+	float: left;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	width: 15%;
+	height: auto;
+	border: 2px solid  white;
+	border-radius: 6px;
+	overflow: hidden;
+   
+	}
+
+.tab button 
+	{
+	display: block;
+	background-color: inherit;
+	color: black;
+	padding: 22px 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	font-size: 17px;
+	}
+
+.tab button:hover 
+	{
+	background-color: #ddd;
+	}
+
+.tab button.active 
+	{
+	background-color: #ccc;
+	}
+
+
+.tabcontent 
+	{
+	float: left;
+	padding: 30px 40px;
+	border: none;
+	width: 70%;
+	border-left: none;
+	height: 100VH;
+	margin-bottom: 6em;
+    display: none;
+	
+	
+	}
+
+	.tablinks{
+
+		width: 100px;
+		background: transparent;
+		border: 2px solid white;
+		outline: none;
+		border-radius: 6px;
+		overflow: hidden;
+	}
+	input[type="text"], input[type="password"]
+	{
+	display: block;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 6px solid;
+	background: #ffffff;
+	padding: 5px;
+	margin: 0px 0px 2px 0px;
+	border: 1px solid #888888;		
+	width: 50%;
+	}
+	
+p
+	{
+	margin: 10px 0px 3px 0px;
+	font-size: 17px;
+	
+	
+	}
+	
+input[type="submit"], input[type="reset"]
+		{
+		background-color: #d9d9d9;
+		color: black;
+		padding: 10px 20px;
+		margin: 15px 10px 20px 40px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		width: 15%;
+		
+		}	
+
+
+/* inputs styling */
+
+input ,textarea {
+ border: none;
+ padding: 1rem;
+ border-radius: 1rem;
+ background: #e8e8e8;
+ /* box-shadow: 20px 20px 60px #c5c5c5,-20px -20px 60px #ffffff; */
+ transition: 0.3s;
+}
+select {
+ border: none;
+ padding: 0.25rem;
+ border-radius: 1rem;
+ background: #e8e8e8;
+ /* box-shadow: 20px 20px 60px #c5c5c5,-20px -20px 60px #ffffff; */
+ transition: 0.3s;
+}
+
+input,textarea:focus {
+ outline-color: #e8e8e8;
+ background: #e8e8e8;
+ /* box-shadow: inset 20px 20px 60px #d2d1d1, */
+		/* inset -20px -20px 60px #ffffff; */
+ transition: 0.3s;
+}
+
+/* upload cv */
+.btn-warning{
+  position: relative;
+  padding: 11px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #212121;
+  border: 0;
+  transition: 0.2s;
+  overflow: hidden; 
+}
+
+.btn-warning input[type = "file"]{
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: scale(3);
+  opacity: 0;
+}
+
+.btn-warning:hover{
+  background-color: green;
+}
+/* ajouter,annuller,valider btn*/
+
+.btn {
+ color: #090909;
+ padding: 0.7em 1.7em;
+ font-size: 11px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ /* box-shadow: 6px 6px 12px #c5c5c5, */
+             /* -6px -6px 12px #ffffff; */
+}
+
+.btn:active {
+ color: #666;
+ /* box-shadow: inset 4px 4px 12px #c5c5c5, */
+             /* inset -4px -4px 12px #ffffff; */
+}
+
+
+.recommend{
+    margin-top: 3rem;
+    gap: 3em;
+}
+
+	
+</style>
+</head>
+
+		<body>
+			<main>
+			<div class="hero-img2">
+
+			</div>
+
+			<div class="wrapper">
+				
+				<header>
+					<a href="homepage.html" class="logo" >Get <span>Recruited</span></a>
+
+					
+					<nav class="navigation">
+						<svg class="close" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.5 0.25C13.2861 0.25 10.1443 1.20305 7.47199 2.98862C4.79969 4.77419 2.71689 7.31209 1.48697 10.2814C0.257041 13.2507 -0.0647633 16.518 0.562247 19.6702C1.18926 22.8224 2.73692 25.7179 5.00952 27.9905C7.28213 30.2631 10.1776 31.8108 13.3298 32.4378C16.482 33.0648 19.7493 32.743 22.7186 31.513C25.6879 30.2831 28.2258 28.2003 30.0114 25.528C31.797 22.8557 32.75 19.7139 32.75 16.5C32.75 14.366 32.3297 12.2529 31.5131 10.2814C30.6964 8.30985 29.4994 6.51847 27.9905 5.00952C26.4815 3.50056 24.6902 2.3036 22.7186 1.48696C20.7471 0.670319 18.634 0.25 16.5 0.25ZM20.9038 18.5963C21.0561 18.7473 21.177 18.927 21.2595 19.1251C21.342 19.3231 21.3844 19.5355 21.3844 19.75C21.3844 19.9645 21.342 20.1769 21.2595 20.3749C21.177 20.573 21.0561 20.7527 20.9038 20.9038C20.7527 21.0561 20.573 21.177 20.3749 21.2594C20.1769 21.3419 19.9645 21.3844 19.75 21.3844C19.5355 21.3844 19.3231 21.3419 19.1251 21.2594C18.927 21.177 18.7473 21.0561 18.5963 20.9038L16.5 18.7913L14.4038 20.9038C14.2527 21.0561 14.073 21.177 13.8749 21.2594C13.6769 21.3419 13.4645 21.3844 13.25 21.3844C13.0355 21.3844 12.8231 21.3419 12.6251 21.2594C12.427 21.177 12.2473 21.0561 12.0963 20.9038C11.9439 20.7527 11.8231 20.573 11.7406 20.3749C11.6581 20.1769 11.6156 19.9645 11.6156 19.75C11.6156 19.5355 11.6581 19.3231 11.7406 19.1251C11.8231 18.927 11.9439 18.7473 12.0963 18.5963L14.2088 16.5L12.0963 14.4038C11.7903 14.0978 11.6184 13.6827 11.6184 13.25C11.6184 12.8173 11.7903 12.4022 12.0963 12.0963C12.4023 11.7903 12.8173 11.6184 13.25 11.6184C13.6827 11.6184 14.0978 11.7903 14.4038 12.0963L16.5 14.2088L18.5963 12.0963C18.9023 11.7903 19.3173 11.6184 19.75 11.6184C20.1827 11.6184 20.5978 11.7903 20.9038 12.0963C21.2098 12.4022 21.3817 12.8173 21.3817 13.25C21.3817 13.6827 21.2098 14.0978 20.9038 14.4038L18.7913 16.5L20.9038 18.5963Z" fill="black"/>
+							</svg>
+						<ul>
+							<li><a href="homepage.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li> <a href="about">Service</a></li>
+							<li><a href="about.html">Contact</a></li>
+							<li><button class="Loginbtn" id="Loginbtn" >Upload CV</button></li>
+						</ul>
+
+
+					
+							
+					</nav>
+					
+					<svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
+						</svg>
+				</header>
+
+
+<section class="hero">
+		
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'INFORMATION GENERALES')"id="defaultOpen"> CV Upload</button>
+			<!--<button class="tablinks" onclick="openCity(event, 'FORMATION ')">Search for A JOb</button>-->	
+				<a href="cvmaker.html  ">
+                    <button class="tablinks" >Create a Cv</button>
+                </a>
+			</div>	
+
+		<form action="bvn4.php" method="post" enctype="multipart/form-data">
+	
+			<div id="INFORMATION GENERALES" class="tabcontent">
+				<h3>CV MANAGEMENT</h3>
+				<label for="cv">Curriculum Vitae</label></td>
+					<td><input type="file" name="cv" id="cv" accept=".pdf" onchange="checkFileSize()">
+					<p>Taille maximale:<strong>10mb</strong></p></td>
+		
+        <button name="envoyer" type="submit">Envoyer</button>
+	    <button type="reset">Annuler</button></div>
+</form>
+			
+
+			<div id="FORMATION " class="tabcontent">
+				<h3>JOB SEARCH</h3>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" id="mainPage">
+
+                    <section id="" class=" m-4">
+                        <div class="container">
+                            <h4 class="text-capitalize">Jobs</h4>
+    
+                            <div class="row my-5">
+                                <div class="col-6">
+                                    <label for="" class="form-label" id="">Position</label>
+                                    <input type="text" id="" class="form-control" name="position">
+                                </div>
+                                <div class="col-6">
+                                    <label for="" class="form-label" id="">Location</label>
+                                    <input type="text" id="" class="form-control" name="position">
+                                </div>
+                            </div>
+   
+                        </div>
+                    </section>
+                    
+                  </main>
+				
+				
+
+					
+			</div>
+
+			
+			
+	</div>
+
+			
+    <script src="func.js"></script>
+			<script>
+
+				var boutonAjout = document.getElementById("ajouter-zone-saisie");
+				var conteneurZonesSaisie = document.getElementById("conteneur-zones-saisie");
+				
+				boutonAjout.addEventListener("click", function() {
+				var nouvelleZoneSaisie = document.createElement("input");
+				nouvelleZoneSaisie.type = "text";
+				conteneurZonesSaisie.appendChild(nouvelleZoneSaisie);
+				});
+
+
+				function openCity(evt, mop) 
+				{
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) 
+					{
+						tabcontent[i].style.display = "none";
+					}
+				
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) 
+					{
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+				
+					document.getElementById(mop).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
+<section>
+			
+</main>
+
+
+
+
+
+				
+				
+		</body>
+		
+
+
+
+
+</html>
